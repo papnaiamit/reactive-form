@@ -1,0 +1,13 @@
+
+<div class="wrap"> 
+    <form [formGroup]="parentForm" (ngSubmit)="onSubmit($event)">
+        <app-membership-info [membershipDetailsForm]="parentForm"></app-membership-info>
+        <br>
+        <app-personal-info [personalDetailsForm]="parentForm"></app-personal-info>
+        <br>
+        <app-advisor-info [advisorDetailsForm]="parentForm"></app-advisor-info>
+
+        <button type="submit" [disabled]="parentForm.invalid" class="btn btn-primary">Save details </button>
+    </form>
+</div>
+
